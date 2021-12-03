@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx
+  name: nodeapp
   labels:
-    app: nginx
-    tier: frontend
+    app: nodeapp
+    tier: backend
 spec:
   containers:
-  - name: nginx
+  - name: nodeapp
     image: piyushtrainingacr.azurecr.io/demo1/node:v1
     resources:
       limits:
