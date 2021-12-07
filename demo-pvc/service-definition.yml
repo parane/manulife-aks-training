@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pvc-demo
+  labels:
+    app: pvc-demo
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080  
+    name: http
+  selector:
+    app: pvc-demo
+  type: LoadBalancer
