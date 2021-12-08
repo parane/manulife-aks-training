@@ -11,3 +11,14 @@ build
 gradle/
 
 ./**/gradlew
+
+
+*.idea/*
+.idea
+.idea/*
+*.idea
+
+
+*.classpath
+*.idea/.gitignore
+*.project
