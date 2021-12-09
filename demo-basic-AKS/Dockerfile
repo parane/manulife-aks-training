@@ -1,5 +1,9 @@
-FROM hello-world
+FROM openjdk:11
 
-COPY  app\build\generated\*.jar /app
+RUN mkdir app
+
+EXPOSE 8080
+COPY  ./app/build/libs/app.jar /app
 WORKDIR  /app
-RUN java -jar app.jar
+
+CMD java -jar app.jar
