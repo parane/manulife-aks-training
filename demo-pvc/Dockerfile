@@ -1,6 +1,9 @@
-FROM hello-world
+FROM openjdk:11
 
 RUN mkdir app
-COPY  demo-pvc/build/lib/demo-pvc.jar /app
+
+EXPOSE 8080
+COPY  ./app/build/libs/demo-pvc.jar /app
 WORKDIR  /app
-RUN java -jar demo-pvc.jar
+
+CMD java -jar demo-pvc.jar
