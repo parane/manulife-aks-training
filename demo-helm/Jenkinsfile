@@ -4,7 +4,7 @@ pipeline {
     environment {
         AZURE_SUBSCRIPTION_ID='2ef67011-143e-4616-9e05-64925cbd0aa0'
         AZURE_TENANT_ID='9dae36f4-0de6-4a4e-a718-3dc11e509f38'
-        CONTAINER_REGISTRY='manulifeacr.azurecr.io'
+        CONTAINER_REGISTRY='manulifeacr'
         RESOURCE_GROUP='Manulife_AKS'
         REPO="training/demo"
         IMAGE_NAME="app"
