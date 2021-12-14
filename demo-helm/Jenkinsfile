@@ -35,8 +35,8 @@ pipeline {
         }
         stage('Deploy to AKS using HELM') {
             steps {
-                dir('demo-helm/app-chart') {
-                    sh 'kubectl get nodes'
+                dir('demo-helm') {
+                    sh 'helm install -f app ./app-chart/'
                 }
             }
         }
