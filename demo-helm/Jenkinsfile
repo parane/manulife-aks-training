@@ -4,7 +4,7 @@ pipeline {
     environment {
         AZURE_SUBSCRIPTION_ID='2ef67011-143e-4616-9e05-64925cbd0aa0'
         AZURE_TENANT_ID='9dae36f4-0de6-4a4e-a718-3dc11e509f38'
-        CONTAINER_REGISTRY='ManulifeACR'
+        CONTAINER_REGISTRY='manulifeacr.azurecr.io'
         RESOURCE_GROUP='Manulife_AKS'
         REPO="training/demo"
         IMAGE_NAME="app"
@@ -27,8 +27,8 @@ pipeline {
                                 sh 'az acr login --name $CONTAINER_REGISTRY --resource-group $RESOURCE_GROUP --username ManulifeACR --password $ACR_PASSWORD'
                                 // sh 'az acr build --image $REPO/$IMAGE_NAME:$TAG --registry $CONTAINER_REGISTRY --file Dockerfile . '
                                 sh 'docker build -t $IMAGE_NAME:$TAG .'
-                                sh 'docker tag $IMAGE_NAME:$TAG $REPO/$IMAGE_NAME:$TAG'
-                                sh 'docker push  $IMAGE_NAME:$TAG $REPO/$IMAGE_NAME:$TAG'
+                                sh 'docker tag $IMAGE_NAME:$TAG $CONTAINER_REGISTRY/$REPO/$IMAGE_NAME:$TAG'
+                                sh 'docker push $CONTAINER_REGISTRY/$REPO/$IMAGE_NAME:$TAG'
                     }
                 }
             }
