@@ -1,0 +1,13 @@
+pipeline {
+    stages {
+        stage('Checkout Git and Check Difference') {
+            steps {
+                checkout scm
+            }
+        // stage('Docker Build') {
+        //     steps {
+        //         checkout scm
+        //     }
+         }
+    }
+}
