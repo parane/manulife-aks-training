@@ -5,10 +5,11 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  container_registry: ${CONTAINER_REGISTRY}
+  repository: ${REPO}
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: ${TAG}
 
 imagePullSecrets: []
 nameOverride: ""
