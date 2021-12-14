@@ -29,7 +29,7 @@ pipeline {
                             sh 'docker tag $IMAGE_NAME:$TAG $REPO/$IMAGE_NAME:$TAG'
                             sh 'docker push  $IMAGE_NAME:$TAG $REPO/$IMAGE_NAME:$TAG'
                 }
-        
+            }
         }
     }
 }
