@@ -1,4 +1,6 @@
 pipeline {
+    agent { 
+    } 
     stages {
         stage('Checkout Git and Check Difference') {
             steps {
