@@ -36,7 +36,7 @@ pipeline {
         stage('Deploy to AKS using HELM') {
             steps {
                 dir('demo-helm') {
-                    sh 'helm install app ./app-chart/'
+                    sh 'helm install --set container_registory=${CONTAINER_REGISTRY} repository=${REPO} image_name=${IMAGE_NAME} tag=${TAG} app ./app-chart/'
                 }
             }
         }
