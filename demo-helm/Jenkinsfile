@@ -1,14 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout Git and Check Difference') {
+        stage('Checkout git') {
             steps {
                 checkout scm
             }
-        // stage('Docker Build') {
-        //     steps {
-        //         checkout scm
-        //     }
+        stage('Docker Build') {
+            steps {
+                sh "az --version"
+            }
          }
     }
 }
