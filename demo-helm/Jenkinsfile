@@ -5,10 +5,11 @@ pipeline {
             steps {
                 checkout scm
             }
+        }
         stage('Docker Build') {
             steps {
                 sh "az --version"
             }
-         }
+        }
     }
 }
