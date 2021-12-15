@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodeapp
+  name: demoapp-service 
   labels:
-    app: nodeapp
+    app: nodeapp-svc
 spec:
   ports:
   - port: 80
     targetPort: 8080  
     name: http
   selector:
-    app: nodeapp
+    app: nodeapp-deploy
   type: LoadBalancer
