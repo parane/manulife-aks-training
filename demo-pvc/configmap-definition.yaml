@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demopvc-config
+data:
+  spring.application.name: pvc-demo
+  pvc.mount-path: /mnt/azure

@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: demoapp-service 
+  name: demopvc-svc-sc
   labels:
-    app: demoapp-service
+    app: demopvc-svc-sc
 spec:
   ports:
   - port: 80
     targetPort: 8080  
     name: http
   selector:
-    app: demoapp-deployment
+    app: demopvc-pod-sc
   type: LoadBalancer
