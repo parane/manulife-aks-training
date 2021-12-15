@@ -21,28 +21,33 @@ The project creates an 3 resources in total
 ----
 ### Steps to run 
 
-1. Run `az group create --name <<Resource Group Name>> --location <<Region>>` to create a resource group in Azure.
+1. Run below command to create a resource group in Azure.
+
+     az group create --name <<Resource Group Name>> --location <<Region>>
 
 2. Create a service principal ( it is much like an identity : a username and password ) and assign role to pull images/gain access to certain Azure resources.
 
 3. Command to create : 
-        `az ad sp create-for-rbac --skip-assignment`
+        
+        az ad sp create-for-rbac --skip-assignment
+
    We are returned an "appId" and "password" --> save this separately somewhere
 
-4. Now run 
-        `az acr create --resource-group <<RG Name>> --name <<ACR Name>> --sku Basic'`
-   to create an Azure Container Registry 
+4. Now run to create an Azure Container Registry 
+        
+        az acr create --resource-group <<RG Name>> --name <<ACR Name>> --sku Basic'
 
 5. Now, we can assign/add permissions to our Service Principal to read ACR images by runnning
-        `az role assignment create --assignee <<APP_ID>> --role acrpull --scope <<ACR_ID>>`
+        
+        az role assignment create --assignee <<APP_ID>> --role acrpull --scope <<ACR_ID>>
 
 
 6. At this point to build and push images to ACR, we can run :
-        `az acr build --image <IMG_NAME>:<VERSION> --registry <ACR_NAME> --file Dockerfile .`
+
+        az acr build --image <IMG_NAME>:<VERSION> --registry <ACR_NAME> --file Dockerfile .
 
 5. To create a basic AKS cluster:
 
-        ```
         az aks create --resource-group <<RG_NAME>> \
         --name <<Cluster_Name>> \
         --node-count <<default is 3>> \
@@ -50,4 +55,3 @@ The project creates an 3 resources in total
         --generate-ssh-keys \
         --service-principal <<SP_ID>> \
         --client-secret <<client-pass>>
-        ```
