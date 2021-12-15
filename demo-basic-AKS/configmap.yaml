@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demoapp-config
+data:
+  spring.application.name: demo_change_name
+  spring.application.env: develop

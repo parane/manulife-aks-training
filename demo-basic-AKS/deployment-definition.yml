@@ -1,20 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodeapp-deployment
+  name: demoapp-deployment
 spec:
   selector:
     matchLabels:
-      app: nodeapp 
+      app: nodeapp-deploy
   replicas: 2 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: nodeapp
+        app: nodeapp-deploy
     spec:
       containers:
       - name: nodeapp
-        image: piyushtrainingacr.azurecr.io/demo1/node:v1 
+        image: piyushtrainingacr.azurecr.io/test/demo1:v4
         ports:
         - containerPort: 80
+        env:
+          - name: SPRING_APPLICATION_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: demoapp-config
+                key: spring.application.name
+          - name: SPRING_APPLICATION_ENV
+            valueFrom:
+              configMapKeyRef:
+                name: demoapp-config
+                key: spring.application.env
+
 
