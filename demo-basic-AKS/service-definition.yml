@@ -3,12 +3,12 @@ kind: Service
 metadata:
   name: demoapp-service 
   labels:
-    app: nodeapp-svc
+    app: demoapp-service
 spec:
   ports:
   - port: 80
     targetPort: 8080  
     name: http
   selector:
-    app: nodeapp-deploy
+    app: demoapp-deployment
   type: LoadBalancer
