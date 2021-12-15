@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: demoapp-sts
-          image: piyushtrainingacr.azurecr.io/demo/pvcdemo:v2
+          image: piyushtrainingacr.azurecr.io/demo/pvcdemo:v1
           ports:
           - containerPort: 80
           env:
