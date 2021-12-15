@@ -19,7 +19,6 @@ public class controller {
 		return appName;
 	}
 
-
 	@GetMapping("/appenv")
 	public String appEnv() {
 		return appEnv;
