@@ -21,9 +21,7 @@ The project creates an 3 resources in total
 ----
 ### Steps to run 
 
-1. Run below command to create a resource group in Azure
-
-     az group create --name <<Resource Group Name>> --location <<Region>> .
+1. Run below command to create a resource group in Azure `az group create --name <<Resource Group Name>> --location <<Region>>`.
 
 2. Create a service principal ( it is much like an identity : a username and password ) and assign role to pull images/gain access to certain Azure resources.
 
