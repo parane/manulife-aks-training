@@ -42,7 +42,7 @@ The project creates an 3 resources in total
 
 5. To create a basic AKS cluster:
 
-        ```shell
+        ```
         az aks create --resource-group <<RG_NAME>> \
         --name <<Cluster_Name>> \
         --node-count <<default is 3>> \
