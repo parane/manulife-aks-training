@@ -5,16 +5,17 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: nodeapp-deploy
+      app: demoapp-deployment
   replicas: 2 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: nodeapp-deploy
+        app: demoapp-deployment
     spec:
       containers:
-      - name: nodeapp
-        image: piyushtrainingacr.azurecr.io/test/demo1:v4
+      - name: demoapp
+        image: piyushtrainingacr.azurecr.io/manulife/demo1:v1
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
         env:
