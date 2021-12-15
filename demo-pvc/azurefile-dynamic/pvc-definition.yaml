@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: demoapp-pvc-sc
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: demopvc-storageclass
+  resources:
+    requests:
+      storage: 2Gi
