@@ -25,9 +25,14 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: 'myAzureCredential', passwordVariable: 'AZURE_CLIENT_SECRET', usernameVariable: 'AZURE_CLIENT_ID')]) {
                                 sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
                                 sh 'az account set -s $AZURE_SUBSCRIPTION_ID'
+<<<<<<< HEAD
                     }
                     withCredentials([usernamePassword(credentialsId: 'spAzureCredential', passwordVariable: 'ACR_ACCESS_KEY', usernameVariable: 'ACR_USERNAME')]) {
                                 sh 'az acr login --name $CONTAINER_REGISTRY --resource-group $RESOURCE_GROUP --username $ACR_USERNAME --password $ACR_ACCESS_KEY'
+=======
+                                sh 'az acr login --name $CONTAINER_REGISTRY --resource-group $RESOURCE_GROUP --username ManulifeACR --password $ACR_PASSWORD'
+                                // sh 'az acr build --image $REPO/$IMAGE_NAME:$TAG --registry $CONTAINER_REGISTRY --file Dockerfile . '
+>>>>>>> a3cf91d988e71ecc455964e2b51f3d0d7dd6114b
                                 sh 'docker build -t $IMAGE_NAME:$TAG .'
                                 sh 'docker tag $IMAGE_NAME:$TAG $CONTAINER_REGISTRY/$REPO/$IMAGE_NAME:$TAG'
                                 sh 'docker push $CONTAINER_REGISTRY/$REPO/$IMAGE_NAME:$TAG'
@@ -38,7 +43,11 @@ pipeline {
         stage('Deploy to AKS using HELM') {
             steps {
                 dir('demo-helm') {
+<<<<<<< HEAD
                     sh 'helm upgrade --install --set container_registory=${CONTAINER_REGISTRY},repository=${REPO},image_name=${IMAGE_NAME},tag=${TAG} app ./app-chart/ --namespace ${NAMESPACE}'
+=======
+                    sh 'helm install --set container_registory=${CONTAINER_REGISTRY},repository=${REPO},image_name=${IMAGE_NAME},tag=${TAG} app ./app-chart/'
+>>>>>>> a3cf91d988e71ecc455964e2b51f3d0d7dd6114b
                 }
             }
         }
