@@ -21,7 +21,9 @@ The project creates an 3 resources in total
 ----
 ### Steps to run 
 
-1. Run below command to create a resource group in Azure `az group create --name <<Resource Group Name>> --location <<Region>>`.
+1. Run below command to create a resource group in Azure 
+
+        az group create --name <<Resource Group Name>> --location <<Region>>
 
 2. Create a service principal ( it is much like an identity : a username and password ) and assign role to pull images/gain access to certain Azure resources.
 
@@ -33,7 +35,7 @@ The project creates an 3 resources in total
 
 4. Now run to create an Azure Container Registry 
         
-        az acr create --resource-group <<RG Name>> --name <<ACR Name>> --sku Basic'
+        az acr create --resource-group <<Resource Group Name>> --name <<ACR Name>> --sku Basic'
 
 5. Now, we can assign/add permissions to our Service Principal to read ACR images by runnning
         
@@ -46,10 +48,24 @@ The project creates an 3 resources in total
 
 5. To create a basic AKS cluster:
 
-        az aks create --resource-group <<RG_NAME>> \
+        az aks create --resource-group <<Resource Group Name>> \
         --name <<Cluster_Name>> \
         --node-count <<default is 3>> \
         --enable-addons [<monitoring etc.>] \
         --generate-ssh-keys \
         --service-principal <<SP_ID>> \
         --client-secret <<client-pass>>
+
+Now, to connect to the created AKS cluster we need to run below commands 
+
+        az aks get-credentials --resource-group <<Resource Group Name>> --name <<Cluster_Name>>
+
+This will download the kubeconfig file which allows access to the cluster.
+
+To determine which cluster we are using currently, run :
+
+        kubectl config current-context
+
+to switch context 
+
+        kubectl config use-context <<cluster_name>>
