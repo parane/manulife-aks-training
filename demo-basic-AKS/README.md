@@ -13,7 +13,7 @@ The project creates an 3 resources in total
 2. Kubectl
 
 ----
- ### Pre-requistes
+ ### Pre-requisites
 
 1. az cli installed
 2. kubectl installed
@@ -41,7 +41,7 @@ The project creates an 3 resources in total
         `az acr build --image <IMG_NAME>:<VERSION> --registry <ACR_NAME> --file Dockerfile .`
 
 5. To create a basic AKS cluster:
-        ```
+        ```console
         az aks create --resource-group <<RG_NAME>> \
         --name <<Cluster_Name>> \
         --node-count <<default is 3>> \
