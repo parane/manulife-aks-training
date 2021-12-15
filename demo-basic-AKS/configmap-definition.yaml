@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: demoapp-config
 data:
-  spring.application.name: demo_change_name
+  spring.application.name: app-demo-aks
   spring.application.env: develop
