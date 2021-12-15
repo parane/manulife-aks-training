@@ -16,4 +16,8 @@ RUN mkdir /app
 
 COPY --from=build /home/gradle/src/app/build/libs/*.jar /app/spring-boot-application.jar
 
-ENTRYPOINT ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-Djava.security.egd=file:/dev/./urandom","-jar","/app/spring-boot-application.jar"]
+COPY /app/applicationinsights-agent-3.2.3.jar /app/applicationinsights-agent-3.2.3.jar
+
+COPY /app/applicationinsights.json /app/applicationinsights.json 
+
+ENTRYPOINT ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-Djava.security.egd=file:/dev/./urandom","-jar","/app/spring-boot-application.jar", "-javaagent:app/applicationinsights-agent-3.2.3.jar"]
