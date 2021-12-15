@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: demopvc-pod
-    image: piyushtrainingacr.azurecr.io/demo/pvcdemo:v2
+    image: piyushtrainingacr.azurecr.io/manulife/pvcdemo:v1
     imagePullPolicy: Always
     resources:
       limits:
