@@ -41,7 +41,8 @@ The project creates an 3 resources in total
         `az acr build --image <IMG_NAME>:<VERSION> --registry <ACR_NAME> --file Dockerfile .`
 
 5. To create a basic AKS cluster:
-        ```console
+
+        ```shell
         az aks create --resource-group <<RG_NAME>> \
         --name <<Cluster_Name>> \
         --node-count <<default is 3>> \
