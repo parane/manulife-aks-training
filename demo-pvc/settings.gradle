@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'demo-pvc'
-include('demo-pvc')
+include('app')

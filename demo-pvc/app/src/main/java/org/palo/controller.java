@@ -12,10 +12,10 @@ import java.util.List;
 @RestController
 public class controller {
 
-    @Value("${spring.application.name}")
-    String appName;
+	@Value("${SPRING_APPLICATION_NAME}")
+	String appName;
 
-    @Value("${pvc.mount-path:.}")
+    @Value("${PVC_MOUNT_PATH:.}")
     String pvcMountPath;
 
     @GetMapping("/appname")

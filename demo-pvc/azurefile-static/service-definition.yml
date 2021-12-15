@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: pvc-demo
+  name: demopvc-svc
   labels:
-    app: pvc-demo
+    app: demopvc-svc
 spec:
   ports:
   - port: 80
     targetPort: 8080  
     name: http
   selector:
-    app: pvc-demo
+    app: demopvc-pod
   type: LoadBalancer
