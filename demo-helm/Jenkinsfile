@@ -6,11 +6,7 @@ pipeline {
         AZURE_TENANT_ID='9dae36f4-0de6-4a4e-a718-3dc11e509f38'
         CONTAINER_REGISTRY='piyushtrainingacr.azurecr.io'
         RESOURCE_GROUP='piyush-training'
-        REPO="manulife"
-        IMAGE_NAME="demo1"
-        TAG="v1"
         NAMESPACE="default"
-
     }
 
     stages {
@@ -38,7 +34,7 @@ pipeline {
         stage('Deploy to AKS using HELM') {
             steps {
                 dir('demo-helm') {
-                    sh 'helm upgrade --install --set container_registory=${CONTAINER_REGISTRY},repository=${REPO},image_name=${IMAGE_NAME},tag=${TAG} app ./app-chart/ --namespace ${NAMESPACE}'
+                    sh 'helm upgrade --install -f ./app-chart/myvalues.yaml app ./app-chart/ --namespace ${NAMESPACE}'
                 }
             }
         }

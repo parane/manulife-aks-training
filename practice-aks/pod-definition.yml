@@ -1,2 +1,17 @@
 apiVersion: v1
 kind: Pod
+metadata:
+  name: nodeapp
+  labels:
+    app: nodeapp
+    tier: backend
+spec:
+  containers:
+  - name: nodeapp
+    image: manulifetrainingacr.azurecr.io/manulife/app:v1
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8080

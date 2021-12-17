@@ -6,7 +6,7 @@ metadata:
   labels:
     app: demoapp-sts
 spec:
-  replicas: 3
+  replicas: 4
   serviceName: demoapp-headless
   selector:
     matchLabels:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: demoapp-sts
-          image: piyushtrainingacr.azurecr.io/demo/pvcdemo:v1
+          image: piyushtrainingacr.azurecr.io/manulife/pvcdemo:v1
           ports:
           - containerPort: 80
           env:
