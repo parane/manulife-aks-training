@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: nodeapp
-    image: piyushtrainingacr.azurecr.io/demo1/node:v1
+    image: manulifeacr.azurecr.io/manulife/app:v1
     resources:
       limits:
         memory: "128Mi"

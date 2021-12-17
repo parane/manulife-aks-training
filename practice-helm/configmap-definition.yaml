@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: "{{ .Values.configmap.name }}"
 data:
-  spring.application.name: demo-helm
+  spring.application.name: app-demo-aks
   spring.application.env: develop

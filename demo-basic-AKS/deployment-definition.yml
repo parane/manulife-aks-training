@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: demoapp-deployment
-  replicas: 2 # tells deployment to run 2 pods matching the template
+  replicas: 2 
   template:
     metadata:
       labels:
@@ -29,5 +29,3 @@ spec:
               configMapKeyRef:
                 name: demoapp-config
                 key: spring.application.env
-
-
