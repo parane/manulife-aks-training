@@ -25,7 +25,7 @@ pipeline {
                                 sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
                                 sh 'az account set -s $AZURE_SUBSCRIPTION_ID'
                     }
-                    withCredentials([usernamePassword(credentialsId: 'spAzureCredentialPiyushACR', passwordVariable: 'ACR_ACCESS_KEY', usernameVariable: 'ACR_USERNAME')]) {
+                    withCredentials([usernamePassword(credentialsId: 'spAzureCredential', passwordVariable: 'ACR_ACCESS_KEY', usernameVariable: 'ACR_USERNAME')]) {
                                 sh 'az acr login --name $CONTAINER_REGISTRY --resource-group $RESOURCE_GROUP --username $ACR_USERNAME --password $ACR_ACCESS_KEY'
                                 sh 'docker build -t $IMAGE_NAME:$TAG .'
                                 sh 'docker tag $IMAGE_NAME:$TAG $CONTAINER_REGISTRY/$REPO/$IMAGE_NAME:$TAG'
