@@ -1,5 +1,6 @@
-pod:
+deployment:
   name: demoapp-helm
+  replicas: 2
   container:
     name: demoapp-helm
     registry: piyushtrainingacr.azurecr.io
