@@ -6,9 +6,10 @@ metadata:
     app: "{{ .Values.service.name }}"
 spec:
   ports:
-  - port: 80
-    targetPort: 8080  
-    name: http
+    - port: "{{ .Values.service.port }}"
+      targetPort: 8080
+      name: http
   selector:
     app: "{{ .Values.pod.name }}"
   type: "{{ .Values.service.type }}"
+

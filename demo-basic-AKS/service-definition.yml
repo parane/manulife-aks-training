@@ -6,9 +6,9 @@ metadata:
     app: demoapp-service
 spec:
   ports:
-  - port: 80
-    targetPort: 8080  
-    name: http
+    - port: 80
+      targetPort: 8080  
+      name: http
   selector:
     app: demoapp-deployment
   type: LoadBalancer
