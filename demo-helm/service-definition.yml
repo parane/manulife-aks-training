@@ -1,14 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodeapp
+  name: "{{ .Values.service.name }}"
+  namespace: "{{ .Values.namespace.name }}"
   labels:
-    app: nodeapp
+    app: "{{ .Values.service.name }}"
 spec:
   ports:
   - port: 80
     targetPort: 8080  
     name: http
   selector:
-    app: nodeapp
-  type: LoadBalancer
+    app: "{{ .Values.pod.name }}"
+  type: "{{ .Values.service.type }}"

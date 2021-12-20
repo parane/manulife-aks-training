@@ -1,7 +1,8 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: "{{ .Values.configmap.name111 }}"
+  name: "{{ .Values.configmap.name }}"
+  namespace: "{{ .Values.namespace.name }}"
 data:
   spring.application.name: demo-helm
   spring.application.env: develop
