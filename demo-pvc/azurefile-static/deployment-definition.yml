@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demoapp-deployment
+spec:
+  selector:
+    matchLabels:
+      app: demoapp-deployment
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: demoapp-deployment
+    spec:
+      containers:
+      - name: demoapp
+        image: piyushtrainingacr.azurecr.io/manulife/demo1:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        env:
+          - name: SPRING_APPLICATION_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: demoapp-config
+                key: spring.application.name
+          - name: SPRING_APPLICATION_ENV
+            valueFrom:
+              configMapKeyRef:
+                name: demoapp-config
+                key: spring.application.env
+        volumeMounts:
+          - name: demoapp-pvc-claim
+            mountPath: /mnt/azure
+      volumes:
+        - name: demoapp-pvc-claim
+          persistentVolumeClaim:
+            claimName: demoapp-pvc

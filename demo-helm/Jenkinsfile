@@ -4,17 +4,17 @@ pipeline {
     environment {
         AZURE_SUBSCRIPTION_ID='2ef67011-143e-4616-9e05-64925cbd0aa0'
         AZURE_TENANT_ID='9dae36f4-0de6-4a4e-a718-3dc11e509f38'
-        RESOURCE_GROUP='manulife-training-1'
-        CONTAINER_REGISTRY='manulifetrainingacr.azurecr.io'
+        RESOURCE_GROUP='training'
+        CONTAINER_REGISTRY='piyushtrainingacr.azurecr.io'
         REPO="manulife"
-        IMAGE_NAME="app"
+        IMAGE_NAME="manulife/demo1"
         TAG="v1"
         NAMESPACE="default"
     }
 
     stages {
         stage('Checkout git') {
-            steps {
+            steps { 
                 checkout scm
             }
         }
