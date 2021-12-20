@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: "{{ .Values.deployment.name }}"
-  namespace: "{{ .Values.namespace.name }}"
+  namespace: "{{ .Values.namespace }}"
   annotations:
     checksum/config: {{ include (print $.Template.BasePath "/configmap-definition.yaml") . | sha256sum }}
     rollme: {{ randAlphaNum 5 | quote }}
