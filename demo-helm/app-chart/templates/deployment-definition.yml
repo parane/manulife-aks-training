@@ -10,7 +10,7 @@ spec:
   selector:
     matchLabels:
       app: "{{ .Values.deployment.name }}"
-  replicas: "{{ .Values.deployment.replicas | int }}"
+  replicas: 5
   template:
     metadata:
       labels:
@@ -21,7 +21,7 @@ spec:
         image: "{{ .Values.deployment.container.registry }}/{{ .Values.deployment.container.repository }}:{{ .Values.deployment.container.tag }}"
         imagePullPolicy: Always
         ports:
-        - containerPort: "{{ .Values.deployment.container.port | int }}"
+        - containerPort: 80
         env:
           - name: SPRING_APPLICATION_NAME
             valueFrom:
