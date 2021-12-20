@@ -13,5 +13,5 @@ mountOptions:
   - actimeo=30
 parameters:
   skuName: Standard_LRS
-  # location: southeastasia
-  # storageAccount: manulifelivesa
+  location: eastus
+  storageAccount: piyushtrainingstoragesa

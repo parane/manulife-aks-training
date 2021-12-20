@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: demoapp-deployment
-  replicas: 2 
+  replicas: 5
   template:
     metadata:
       labels:

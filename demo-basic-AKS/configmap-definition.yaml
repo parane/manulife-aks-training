@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: demoapp-config
 data:
-  spring.application.name: app-demo-aks-2
+  spring.application.name: app-demo-aks-3
   spring.application.env: uat
