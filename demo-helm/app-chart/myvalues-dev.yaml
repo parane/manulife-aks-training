@@ -1,0 +1,21 @@
+namespace: dev
+
+pod:
+  name: demoapp-helm
+  container:
+    name: demoapp-helm
+    registry: piyushtrainingacr.azurecr.io
+    repository: manulife/demo1
+    tag: v1
+    port: 8080
+
+service:
+  name: demoapp-helm-svc
+  ports:
+    name: http
+    port: 80
+    targetport: 8080
+  type: LoadBalancer
+
+configmap:
+  name: demoapp-helm-config
