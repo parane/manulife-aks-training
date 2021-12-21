@@ -28,7 +28,8 @@ Created Azure Kubernetes Cluster using following method :
  3. Azure Cli 
 
 ### 2. Sync up with AKS cluster : 
-Replace kube config file which contain access credential step 1 
+Replace kube config file in your local (C:\Users\[user-name]\.kube) which contain access credential step 1 
+
 (If any issue pls remove exsiting config file and remove ~/.kube and ~/Library/Group\ Containers/group.com.docker/pki directory, then restart docker desktop and wait like 5 minutes)
 
 ### 3. checkup : 
