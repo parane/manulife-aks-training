@@ -1,6 +1,6 @@
 namespace: dev
 
-pod:
+deployment:
   name: demoapp-helm
   container:
     name: demoapp-helm

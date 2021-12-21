@@ -9,6 +9,7 @@ pipeline {
         REPO="manulife"
         IMAGE_NAME="manulife/demo1"
         TAG="v1"
+        ENV="prd"
     }
 
     stages {
@@ -36,7 +37,7 @@ pipeline {
         stage('Deploy to AKS using HELM') {
             steps {
                 dir('demo-helm') {
-                    sh 'helm upgrade --install -f ./app-chart/myvalues.yaml app ./app-chart/'
+                    sh 'helm upgrade --install -f ./app-chart/myvalues-$ENV.yaml app-$ENV ./app-chart/'
                 }
             }
         }

@@ -5,4 +5,4 @@ metadata:
   namespace: "{{ .Values.namespace }}"
 data:
   spring.application.name: demo-helm
-  spring.application.env: develop
+  spring.application.env: "{{ .Values.env }}"

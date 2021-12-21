@@ -1,6 +1,6 @@
 namespace: prd
 
-pod:
+deployment:
   name: demoapp-helm
   container:
     name: demoapp-helm
