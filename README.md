@@ -21,7 +21,7 @@ and Add into Path in env variable.
 ![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/Helm.JPG)
 
 
-##Day #1
+## Day-1
 ### 1. Creating AKS cluster Setup: 
 Created Azure Kubernetes Cluster using following method :
  1. Azure potral (UI - Easy to setup)
@@ -43,4 +43,4 @@ To make sure the connectivity to AKS cluster
 demo- completion 
 practice - for our practice
 
-pls refer: ![Refernce](https://github.com/parane/manulife-aks-training/tree/main/practice-aks)
+pls refer: [practice-aks](https://github.com/parane/manulife-aks-training/tree/main/practice-aks)
