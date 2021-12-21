@@ -8,7 +8,7 @@ pipeline {
         CONTAINER_REGISTRY='piyushtrainingacr.azurecr.io'
         REPO="manulife"
         IMAGE_NAME="manulife/demo1"
-        TAG="v1"
+        TAG="v2"
         ENV="prd"
     }
 

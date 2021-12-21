@@ -7,7 +7,7 @@ deployment:
     name: demoapp-helm
     registry: piyushtrainingacr.azurecr.io
     repository: manulife/demo1
-    tag: v1
+    tag: v2
     port: 8080
 
 service:
