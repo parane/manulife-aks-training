@@ -9,14 +9,6 @@ Demo:
 An Ingress controller is a specialized load balancer for Kubernetes (and other containerized)
 environments.
 
-In order for the Ingress resource to work, the cluster must have an ingress controller running.
-
-### Creating two services 
-
-![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/ingress2.JPG)
-
-### Create Ingress controller
-
     helm upgrade --install ingress-nginx ingress-nginx \
       --repo https://kubernetes.github.io/ingress-nginx \
       --namespace para-sara
@@ -25,6 +17,13 @@ if no helm
 
     kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.0/deploy/static/provider/cloud/deploy.yaml
 
+    
+
+In order for the Ingress resource to work, the cluster must have an ingress controller running.
+
+### Creating two services 
+
+![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/ingress2.JPG)
     
 ### Create Ingress 
 
