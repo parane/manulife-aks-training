@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: demopvc-pod
-    image: piyushtrainingacr.azurecr.io/manulife/pvcdemo:v1
+    image: docker.io/parane/pvcdemo:latest
     imagePullPolicy: Always
     resources:
       limits:
@@ -29,7 +29,7 @@ spec:
             key: pvc.mount-path
     volumeMounts:
       - name: demoapp-pvc-claim
-        mountPath: /mnt/azure
+        mountPath: /tempfiles
   volumes:
     - name: demoapp-pvc-claim
       persistentVolumeClaim:

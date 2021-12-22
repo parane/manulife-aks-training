@@ -41,8 +41,19 @@ To make sure the connectivity to AKS cluster
 
 ![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/Checkup.JPG)
 
-### 4. Creating basic k8s components: 
-demo- completion 
-practice - for our practice
+Note: 
+Acessing Each folder for following topic: 
+
+demo- completion / practice - for our practice
+
+### 4. Creating basic k8s components (practice-aks & demo-basic-AKS ): 
 
 pls refer: [practice-aks](https://github.com/parane/manulife-aks-training/tree/main/practice-aks)
+
+### 5. Creating Volume (demo-pvc): 
+
+pls refer: [demo-pvc](https://github.com/parane/manulife-aks-training/tree/main/demo-pvc)
+
+### 6. Creating Statefulset (demo-statefulset): 
+
+pls refer: [demo-pvc](https://github.com/parane/manulife-aks-training/tree/main/demo-statefulset)

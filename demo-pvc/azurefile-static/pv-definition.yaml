@@ -2,15 +2,16 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: demoapp-pv
+  
 spec:
   capacity:
-    storage: 5Gi
+    storage: 0.3Gi
   accessModes:
     - ReadWriteMany
   azureFile:
     secretName: azure-secret
-    secretNamespace: default
-    shareName: aksfileshare
+    secretNamespace: para-sara
+    shareName: tempfiles
     readOnly: false
   mountOptions:
   - dir_mode=0755
