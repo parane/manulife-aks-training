@@ -57,3 +57,7 @@ pls refer: [demo-pvc](https://github.com/parane/manulife-aks-training/tree/main/
 ### 6. Creating Statefulset (demo-statefulset): 
 
 pls refer: [demo-statefulset](https://github.com/parane/manulife-aks-training/tree/main/demo-statefulset)
+
+### 7. Creating Job (demo-job): 
+
+pls refer: [demo-job](https://github.com/parane/manulife-aks-training/tree/main/demo-job)
