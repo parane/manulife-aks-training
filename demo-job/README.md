@@ -1,7 +1,7 @@
 ## Jobs
 
-![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/job.JPG)
-![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/cron.JPG)
+![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/Job.JPG)
+![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/Cron.JPG)
 
 Demo:
 Job:
