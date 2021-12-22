@@ -7,11 +7,10 @@
 
 ### Prior Steps 
 
-Creating azure Storage Account:
+Creating azure Storage Account and Azure File setup:
 
 [Refer](https://zimmergren.net/mount-an-azure-storage-file-share-to-deployments-in-azure-kubernetes-services-aks/)
 
-![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/Volume.JPG)
 
 ## Creating Azure file and manual static Volume Provisioning 
 
@@ -23,6 +22,11 @@ creates the PVC and the Pod, and the Pod uses the storage provided by the PV thr
 
 go into azurefile-static
 
+### Creating Azure Secret
+Add your Strorage account name and token in base64 format into azure-secret file and create 
+
+    kubectl create -f azure-secret.yaml
+    
 ### Creating Persistent Volume
 
     kubectl create -f pv-definition.yaml
@@ -58,17 +62,25 @@ Check any connectivity issue in K8s events:
 Check app log sync issues
 
     kubectl logs demopvc-pod  -c demopvc-pod
+![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/log.JPG)
+  
     
 Check App functionality 
 List Down All exsiting files in Azure File in App Api 
 
+1.
 ![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/azure_file.JPG)
+
+2. 
 ![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/getfile.JPG)
 
 
-Upload File:
+**Upload File:**
 
+1.
 ![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/uploadfile.JPG)
+
+2.
 ![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/azure_upload.JPG)
 
 
