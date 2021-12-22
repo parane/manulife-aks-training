@@ -27,7 +27,8 @@ Created Azure Kubernetes Cluster using following method :
  2. Azure Cli (Cmd - Easy for azure admin)  
  3. Terraform (infrastructure as code software tool that provides a consistent CLI(not cloud vendor dependent). 
  Easy for version control). Enterprise standard :thumbsup:
-
+ 
+[demo-terraform-aks](https://github.com/parane/manulife-aks-training/tree/main/demo-terraform-aks)
 
 ### 2. Sync up with AKS cluster : 
 Replace kube config file in your local (C:\Users\[user-name]\.kube) which contain access credential step 1 
@@ -69,3 +70,9 @@ pls refer: [demo-k8s-ingress](https://github.com/parane/manulife-aks-training/tr
 ### 9. Health Check (demo-healthcheck): 
 
 pls refer: [demo-healthcheck](https://github.com/parane/manulife-aks-training/tree/main/demo-healthcheck)
+
+## Day-2
+
+### 1. Istio Setup (demo-istio): 
+
+pls refer: [demo-istio](https://github.com/parane/manulife-aks-training/tree/main/demo-istio)
