@@ -61,3 +61,7 @@ pls refer: [demo-statefulset](https://github.com/parane/manulife-aks-training/tr
 ### 7. Creating Job (demo-job): 
 
 pls refer: [demo-job](https://github.com/parane/manulife-aks-training/tree/main/demo-job)
+
+### 8. Creating K8s Network Ingress (demo-k8s-ingress): 
+
+pls refer: [demo-k8s-ingress](https://github.com/parane/manulife-aks-training/tree/main/demo-k8s-ingress)
