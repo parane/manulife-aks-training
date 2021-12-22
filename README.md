@@ -65,3 +65,7 @@ pls refer: [demo-job](https://github.com/parane/manulife-aks-training/tree/main/
 ### 8. Creating K8s Network Ingress (demo-k8s-ingress): 
 
 pls refer: [demo-k8s-ingress](https://github.com/parane/manulife-aks-training/tree/main/demo-k8s-ingress)
+
+### 9. Health Check (demo-healthcheck): 
+
+pls refer: [demo-healthcheck](https://github.com/parane/manulife-aks-training/tree/main/demo-healthcheck)
