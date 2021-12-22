@@ -1,2 +1,31 @@
 apiVersion: apps/v1
 kind: Deployment
+metadata:
+  name: paraapp-deployment
+spec:
+  selector:
+    matchLabels:
+      app: paraapp-deployment
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: paraapp-deployment
+    spec:
+      containers:
+        - name: paraapp
+          image: docker.io/parane/para-aks-app
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          env:
+            - name: SPRING_APPLICATION_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: paraapp-config
+                  key: spring.application.name
+            - name: SPRING_APPLICATION_ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: paraapp-config
+                  key: spring.application.env

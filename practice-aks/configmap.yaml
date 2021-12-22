@@ -1,2 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
+metadata:
+  name: paraapp-config
+data:
+  spring.application.name: app-para-aks-3
+  spring.application.env: uatkub

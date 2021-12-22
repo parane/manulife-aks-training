@@ -24,8 +24,10 @@ and Add into Path in env variable.
 ### 1. Creating AKS cluster Setup: 
 Created Azure Kubernetes Cluster using following method :
  1. Azure potral (UI - Easy to setup)
- 2. Terraform (infrastructure as code software tool that provides a consistent CLI). Enterprise standard
- 3. Azure Cli 
+ 2. Azure Cli (Cmd - Easy for azure admin)  
+ 3. Terraform (infrastructure as code software tool that provides a consistent CLI(not cloud vendor dependent). 
+ Easy for version control). Enterprise standard :thumbsup:
+
 
 ### 2. Sync up with AKS cluster : 
 Replace kube config file in your local (C:\Users\[user-name]\.kube) which contain access credential step 1 

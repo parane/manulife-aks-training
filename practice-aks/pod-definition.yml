@@ -1,3 +1,28 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  name: nodeapp
+  labels:
+    app: nodeapp
+    tier: backend
+spec:
+  containers:
+    - name: nodeapp
+      image: docker.io/parane/para-aks-app
+      resources:
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
+      ports:
+        - containerPort: 8080
+      env:
+        - name: SPRING_APPLICATION_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: demoapp-config
+              key: spring.application.name
+        - name: SPRING_APPLICATION_ENV
+          valueFrom:
+            configMapKeyRef:
+              name: demoapp-config
+              key: spring.application.env
