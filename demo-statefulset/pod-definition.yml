@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demoapp-sts
+  labels:
+    app: demoapp-sts
+    tier: backend
+spec:
+  containers:
+    - name: hello
+      image: nginx
+      imagePullPolicy: IfNotPresent

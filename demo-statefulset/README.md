@@ -13,6 +13,9 @@ session for use in the next session with that client. ie Web apps
 
 ![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/headless.JPG)
 
+Demo - Create headless services 
+![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/headless2.JPG)
+
 
 
 ## Using PVCs in StatrfulSet (statefulset-definition.yml)
