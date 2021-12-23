@@ -49,9 +49,43 @@ As shown in the graphic above, the API server calls the AKS webhook server and p
 
    - Get the AKS ID 
      
-     `AKS_ID=$(az aks show -g piyush-training -n piyushTrainingAKSRBAC --query id  -o tsv)`
+     `AKS_ID=$(az aks show -g <Resource Group Name> -n <Cluster Name> --query id  -o tsv)`
 
    - `az role assignment create --role <Azure Role for the User> for eg. "Azure Kubernetes Service RBAC Admin" --assignee <Assignee username> --scope $AKS_ID`
 
-2. 
+   - To create a custom role 
+     
+     `az role definition create --role-definition @role.json`
 
+2. Control access to cluster resources using Kubernetes role-based access control and Azure Active Directory identities in Azure Kubernetes Service
+
+    - Create groups in Azure AD
+
+      `AKS_ID=$(az aks show -g <Resource Group Name> -n <Cluster Name> --query id  -o tsv)`
+      `APPDEV_ID=$(az ad group create --display-name appdev --mail-nickname appdev --query objectId -o tsv)`
+
+    - Create users in Azure AD
+
+      `echo "Please enter the UPN for application developers: " && read AAD_DEV_UPN`
+      `AKSDEV_ID=$(az ad user create --display-name "AKS Dev" --user-principal-name $AAD_DEV_UPN --password $AAD_DEV_PW --query objectId -o tsv)`
+      `az ad group member add --group appdev --member-id $AKSDEV_ID`
+
+    - Create the AKS cluster resources for app devs and app sres.
+
+      `az aks get-credentials --resource-group myResourceGroup --name myAKSCluster --admin`
+      `kubectl create namespace dev`
+      `kubectl apply -f role-dev-namespace.yaml`
+      `kubcetl apply -f rolebinding-dev-namespace.yaml`
+      `az aks get-credentials --resource-group myResourceGroup --name myAKSCluster --overwrite-existing`
+      `kubectl run nginx-dev --image=mcr.microsoft.com/oss/nginx/nginx:1.15.5-alpine --namespace dev`
+      `kubectl get pods --namespace dev`
+
+      `kubectl create namespace sre`
+      `kubectl apply -f role-sre-namespace.yaml`
+      `kubcetl apply -f rolebinding-sre-namespace.yaml`
+      `az aks get-credentials --resource-group myResourceGroup --name myAKSCluster --overwrite-existing`
+      `kubectl run nginx-dev --image=mcr.microsoft.com/oss/nginx/nginx:1.15.5-alpine --namespace sre`
+      `kubectl get pods --namespace sre`
+    
+    - When you run the `kubectl get pods` command Azure will send a login url and code which is needed for your authentication. 
+    - After that the authorization would depend on the role and roleboinding in the kubernetes cluster RBAC.
