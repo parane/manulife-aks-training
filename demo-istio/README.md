@@ -29,8 +29,12 @@ Verify the Istio inject by creating new pod (need to inject the istio proxy as s
 
 Sample app:  
 [BookInfo](https://istio.io/latest/docs/examples/bookinfo/)
+
+Please Refer sample project for creating microservice component 
  
-1. Intall the microservices and resources:
+1. Install the microservices and resources:
+
+        kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
 
 2. Accessible in Cluster 
    -> create temp pod and execute the cmd (if u r in window)
