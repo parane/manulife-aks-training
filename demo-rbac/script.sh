@@ -3,6 +3,7 @@ az aks create -g piyush-training -n piyushTrainingAKSRBAC --enable-aad --enable-
 AKS_ID=$(az aks show -g piyush-training -n piyushTrainingAKSRBAC --query id  -o tsv)
 
 az role assignment create --role "Azure Kubernetes Service RBAC Admin" --assignee pjain@palo-it.com --scope $AKS_ID
+----
 
 APPDEV_ID=$(az ad group create --display-name appdev --mail-nickname appdev --query objectId -o tsv)
 
