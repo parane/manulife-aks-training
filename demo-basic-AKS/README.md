@@ -1,6 +1,5 @@
 # DEMO 1 - Creating a container registry and AKS cluster
 
-----
 The project creates an 3 resources in total 
 1. Service Principal : An Azure service principal is an identity created for use with applications, hosted services, and automated tools to access Azure resources. 
 2. Azure container registry : Azure Container Registry is a private registry service for building, storing, and managing container images and related artifacts

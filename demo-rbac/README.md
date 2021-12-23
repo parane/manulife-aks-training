@@ -1,6 +1,5 @@
 # DEMO RBAC - Creating an AKS cluster with RBAC enabled 
 
-----
 The project creates an AKS cluster which has RBAC enabled. According to AAA principle(Authentication, Authorisation and Admission Control) process, the steps that are put below will address to :
 
 1. Authentication and Authorisation using Azure AD.
