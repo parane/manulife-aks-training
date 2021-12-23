@@ -76,3 +76,7 @@ pls refer: [demo-healthcheck](https://github.com/parane/manulife-aks-training/tr
 ### 1. Istio Setup (demo-istio): 
 
 pls refer: [demo-istio](https://github.com/parane/manulife-aks-training/tree/main/demo-istio)
+
+### 2. Security on AKS (demo-rbac): 
+
+pls refer: [demo-rbac](https://github.com/parane/manulife-aks-training/tree/main/demo-rbac)
