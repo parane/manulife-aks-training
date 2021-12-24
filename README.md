@@ -88,3 +88,5 @@ pls refer: [demo-rbac](https://github.com/parane/manulife-aks-training/tree/main
 ### 4. Helm (practice-helm): 
 
 pls refer: [demo-rbac](https://github.com/parane/manulife-aks-training/tree/main/practice-helm)
+
+### 5. AZURE
