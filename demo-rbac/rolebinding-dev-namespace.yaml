@@ -1,13 +1,13 @@
-kind: RoleBinding
+kind
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: dev-user-access
   namespace: dev
 roleRef:
   apiGroup: rbac.authorization.k8s.io
-  kind: Role
-  name: dev-user-full-access
+  kind: Role #this must be Role or ClusterRole
+  name: dev-user-full-access  # wish to bind to the Role
 subjects:
 - kind: Group
   namespace: dev
-  name: c29b9656-7c75-490b-bc6d-a0d6e8e9eac6 
+  name: c29b9656-7c75-490b-bc6d-a0d6e8e9eac6  # Azure userId - this must match the name  of the Role or ClusterRole you
