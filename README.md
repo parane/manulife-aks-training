@@ -80,3 +80,11 @@ pls refer: [demo-istio](https://github.com/parane/manulife-aks-training/tree/mai
 ### 2. Security on AKS (demo-rbac): 
 
 pls refer: [demo-rbac](https://github.com/parane/manulife-aks-training/tree/main/demo-rbac)
+
+### 3. Security on AKS (demo-rbac): 
+
+pls refer: [demo-rbac](https://github.com/parane/manulife-aks-training/tree/main/demo-rbac)
+
+### 4. Helm (practice-helm): 
+
+pls refer: [demo-rbac](https://github.com/parane/manulife-aks-training/tree/main/practice-helm)
