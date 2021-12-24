@@ -81,12 +81,8 @@ pls refer: [demo-istio](https://github.com/parane/manulife-aks-training/tree/mai
 
 pls refer: [demo-rbac](https://github.com/parane/manulife-aks-training/tree/main/demo-rbac)
 
-### 3. Security on AKS (demo-rbac): 
+### 3. Helm (practice-helm): 
 
-pls refer: [demo-rbac](https://github.com/parane/manulife-aks-training/tree/main/demo-rbac)
+pls refer: [practice-helm](https://github.com/parane/manulife-aks-training/tree/main/practice-helm)
 
-### 4. Helm (practice-helm): 
-
-pls refer: [demo-rbac](https://github.com/parane/manulife-aks-training/tree/main/practice-helm)
-
-### 5. AZURE
+### 4. AZURE app integration
