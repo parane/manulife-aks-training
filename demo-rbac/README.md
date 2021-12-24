@@ -11,6 +11,7 @@
 
 ![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/rbac4.JPG)
 
+please refer upstream for more detail : **[here](https://github.com/paloitsingapore/manulife-aks-training/tree/main/demo-rbac)**
 
 ### Demo:
 
