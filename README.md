@@ -87,4 +87,8 @@ pls refer: [practice-helm](https://github.com/parane/manulife-aks-training/tree/
 
 ### 4. AZURE Service Bus and Event Hub :
 
-pls refer: [practice-helm](https://github.com/parane/manulife-aks-training/tree/main/demo-servicebus)
+pls refer: [demo-servicebus](https://github.com/parane/manulife-aks-training/tree/main/demo-servicebus)
+
+### 5. AZURE SSO :
+
+pls refer: [demo-azure-sso](https://github.com/parane/manulife-aks-training/tree/main/demo-azure-sso)

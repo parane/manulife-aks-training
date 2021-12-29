@@ -10,7 +10,7 @@ Queues and Topics are similar when a sender sends messages, but messages are pro
 
 1. Creating servicebus in Azure 
 
-![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/sv.JPG)
+![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/sb.JPG)
 
 
 2. Creating the Queue:
