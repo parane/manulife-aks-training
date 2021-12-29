@@ -85,4 +85,6 @@ pls refer: [demo-rbac](https://github.com/parane/manulife-aks-training/tree/main
 
 pls refer: [practice-helm](https://github.com/parane/manulife-aks-training/tree/main/practice-helm)
 
-### 4. AZURE app integration
+### 4. AZURE Service Bus and Event Hub :
+
+pls refer: [practice-helm](https://github.com/parane/manulife-aks-training/tree/main/demo-servicebus)
