@@ -22,8 +22,26 @@ Queues and Topics are similar when a sender sends messages, but messages are pro
 
 ![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/sv2.JPG)
 
+**Note:**
 
-Not able to continue , following error :
+If you are behind proxy , you may get following error msg  :
 
     com.azure.core.amqp.exception.AmqpException: Connection timed out: no further information, errorContext[NAMESPACE: demo-manulife-servicebus.servicebus.windows.net. ERROR CONTEXT: N/A]
+![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/sv6.JPG)
 
+
+4. Send msg to service Bus Queue 
+    
+        Post http://localhost:8080/servicebus
+        
+5. verify in azure :
+
+![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/sv4.JPG)
+
+6. Send msg to Event hub
+    
+        Post http://localhost:8080/eventhub
+        
+7. verify in azure :
+
+![alt text](https://github.com/parane/manulife-aks-training/raw/main/images/sv5.JPG)
