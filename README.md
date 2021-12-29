@@ -91,4 +91,4 @@ pls refer: [demo-servicebus](https://github.com/parane/manulife-aks-training/tre
 
 ### 5. AZURE SSO :
 
-pls refer: [demo-azure-sso](https://github.com/parane/manulife-aks-training/tree/main/demo-azure-sso)
+pls refer: [demo-azure-sso](https://github.com/parane/manulife-aks-training/tree/main/demo-azure-sso/myvideostore)
